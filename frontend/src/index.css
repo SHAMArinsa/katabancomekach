@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-charcoal; font-feature-settings: 'kern'; }
+  h1, h2, h3 { font-weight: 500; }
+  ::selection { background: #B4DDD8; color: #2A2E30; }
+  :focus-visible { outline: 2px solid #4FA39D; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  }
+}
+
+@layer components {
+  .container-luxe { @apply mx-auto max-w-[1400px] px-5 md:px-10; }
+  .eyebrow { @apply text-[11px] uppercase tracking-luxe text-champagne-500; }
+}
